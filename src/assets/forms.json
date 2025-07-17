@@ -1,0 +1,31 @@
+{
+  "name": "kyc_individual",
+  "fields": [
+    {
+      "key": "firstName",
+      "type": "text",
+      "label": "First Name",
+      "required": true
+    },
+    {
+      "key": "dob",
+      "type": "date",
+      "label": "Date of Birth",
+      "required": true
+    },
+    {
+      "key": "hasPassport",
+      "type": "checkbox",
+      "label": "Do you have a passport?"
+    },
+    {
+      "key": "passportNumber",
+      "type": "text",
+      "label": "Passport Number",
+      "required": true,
+      "showIf": {
+        "hasPassport": true
+      }
+    }
+  ]
+}
