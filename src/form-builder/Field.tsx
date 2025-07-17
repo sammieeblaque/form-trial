@@ -1,15 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Controller, useFormContext } from "react-hook-form";
+import { IField } from "../constants";
 
-export interface FieldProps {
-  name: string;
-  label: string;
-  required?: boolean;
-  type?: string;
-  options?: string[];
-}
-
-const Field: React.FC<FieldProps> = ({ name, label, required, type }) => {
+const Field: React.FC<IField> = ({ name, label, required, type }) => {
   const {
     control,
     formState: { errors },
