@@ -1,12 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Controller, useFormContext } from "react-hook-form";
+import { Controller } from "react-hook-form";
 import { IField } from "../constants";
 
-const Field: React.FC<IField> = ({ name, label, required, type }) => {
-  const {
-    control,
-    formState: { errors },
-  } = useFormContext();
+const Field: React.FC<IField> = ({
+  name,
+  label,
+  required,
+  type,
+  control,
+  errors,
+}) => {
   return (
     <div className="mb-4">
       <Controller
@@ -16,7 +19,6 @@ const Field: React.FC<IField> = ({ name, label, required, type }) => {
           <input
             {...field}
             type={type || "text"}
-            // label={label}
             className={`w-full border rounded-3xl p-2 ${
               errors[name] ? "border-red-500" : "border-gray-300"
             }`}

@@ -8,6 +8,7 @@ import {
 } from "react-hook-form";
 import { formSchema, type IFieldProps } from "../constants";
 import { getValidationRules } from "./utils";
+import Field from "./Field";
 
 export const FormBuilderRenderer = ({
   field,
@@ -27,20 +28,28 @@ export const FormBuilderRenderer = ({
       case "text":
       case "email":
         return (
-          <Controller
+          // <Controller
+          //   name={field.name}
+          //   control={control}
+          //   rules={getValidationRules(field)}
+          //   render={({ field: { onChange, value, onBlur } }) => (
+          //     <input
+          //       type={field.type}
+          //       placeholder={field.placeholder}
+          //       onChange={onChange}
+          //       onBlur={onBlur}
+          //       value={value || ""}
+          //       className={`${baseClasses} ${errorClasses}`}
+          //     />
+          //   )}
+          // />
+          <Field
             name={field.name}
+            label={field.label}
+            required={field.required}
+            type={field.type}
             control={control}
-            rules={getValidationRules(field)}
-            render={({ field: { onChange, value, onBlur } }) => (
-              <input
-                type={field.type}
-                placeholder={field.placeholder}
-                onChange={onChange}
-                onBlur={onBlur}
-                value={value || ""}
-                className={`${baseClasses} ${errorClasses}`}
-              />
-            )}
+            errors={errors}
           />
         );
 

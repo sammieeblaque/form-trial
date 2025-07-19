@@ -18,6 +18,8 @@ export interface IField {
   options?: string[];
   placeholder?: string;
   required?: boolean;
+  control: UseFormReturn<FieldValues>["control"];
+  errors: UseFormReturn<FieldValues>["formState"]["errors"];
 }
 
 export interface IFormBuilder<T extends FieldValues> {
