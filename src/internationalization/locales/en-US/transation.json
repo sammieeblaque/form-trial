@@ -9,6 +9,12 @@
   "Reset": "Reset",
   "Name": "Name",
   "Email": "Email",
+  "Email Address": "Email Address",
   "Age": "Age",
-  "Language": "Language"
+  "Language": "Language",
+  "Country": "Country",
+  "Bio": "Bio",
+  "First Name": "First Name",
+  "Last Name": "Last Name",
+  "Gender": "Gender"
 }

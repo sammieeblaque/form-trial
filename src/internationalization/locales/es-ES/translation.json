@@ -9,6 +9,12 @@
   "Reset": "Reiniciar",
   "Name": "Nombre",
   "Email": "Correo electrónico",
+  "Email Address": "Dirección de correo electrónico",
   "Age": "Edad",
-  "Language": "Idioma"
+  "Language": "Idioma",
+  "Country": "País",
+  "Bio": "Biografía",
+  "First Name": "Nombre de pila",
+  "Last Name": "Apellido",
+  "Gender": "Género"
 }
