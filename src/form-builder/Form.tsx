@@ -9,6 +9,7 @@ import {
 import { formSchema, type IFieldProps } from "../constants";
 import { getValidationRules } from "./utils";
 import Field from "./Field";
+import { useTranslation } from "react-i18next";
 
 export const FormBuilderRenderer = ({
   field,
@@ -199,6 +200,8 @@ export const FormBuilderRenderer = ({
 };
 
 const JsonformBuilder = () => {
+  const { t, i18n } = useTranslation();
+
   const getDefaultValues = (schema: any) => {
     const defaults: Record<string, any> = {};
     schema?.fields?.forEach((field: any) => {
@@ -220,6 +223,10 @@ const JsonformBuilder = () => {
       }
     });
     return defaults;
+  };
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
   };
 
   const {
@@ -255,20 +262,31 @@ const JsonformBuilder = () => {
             errors={errors}
           />
         ))}
-
+        <button
+          onClick={() => changeLanguage("en-US")}
+          className="cursor-pointer"
+        >
+          English
+        </button>{" "}
+        <button
+          onClick={() => changeLanguage("es-ES")}
+          className="cursor-pointer"
+        >
+          Español
+        </button>
         <div className="flex space-x-4 pt-6">
           <button
             onClick={handleSubmit(onSubmit)}
             className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
           >
-            Submit
+            {t("Submit")}
           </button>
 
           <button
             onClick={onReset}
             className="flex-1 bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
           >
-            Reset
+            {t("Reset")}
           </button>
         </div>
       </div>

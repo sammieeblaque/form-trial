@@ -1,0 +1,14 @@
+{
+  "welcome": "Welcome",
+  "hello": "Hello, {{name}}!",
+  "navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "Submit": "Submit",
+  "Reset": "Reset",
+  "Name": "Name",
+  "Email": "Email",
+  "Age": "Age",
+  "Language": "Language"
+}
