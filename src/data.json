@@ -1,0 +1,961 @@
+{
+  "requestId": "76ff0367-0906-4aae-acc3-c7f0f79628df",
+  "requestTimestamp": "2025-07-10 14:53:27",
+  "message": "Business compliance details",
+  "statusCode": 200,
+  "data": {
+    "general": [
+      {
+        "category": "COMPANY_INFORMATION",
+        "items": [
+          {
+            "key": "legal_name",
+            "type": "text",
+            "label": "Legal Business Name",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596562Z",
+            "updated_at": "2025-07-10T11:27:13.596566Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            },
+            "sub_category": "TELL_US_MORE_ABOUT_YOUR_BUSINESS",
+            "submission": {
+              "value": "Bergnaum Group",
+              "submitted_at": "2025-07-10T14:49:05.789492Z"
+            }
+          },
+          {
+            "key": "registered_address",
+            "type": "text",
+            "label": "Registered Address",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596574Z",
+            "updated_at": "2025-07-10T11:27:13.596576Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            },
+            "sub_category": "TELL_US_MORE_ABOUT_YOUR_BUSINESS",
+            "submission": {
+              "value": "22554 Windler Forks",
+              "submitted_at": "2025-07-10T14:49:05.789505Z"
+            }
+          },
+          {
+            "key": "other_affliated_entities",
+            "type": "select",
+            "label": "Other affliated Entities",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "Parent Company", "value": "Parent Company" },
+              { "label": "Subsidiaries", "value": "Subsidiaries" },
+              { "label": "Joint Ventures", "value": "Joint Ventures" },
+              {
+                "label": "Financial Institutions",
+                "value": "Financial Institutions"
+              },
+              { "label": "NGOs", "value": "NGOs" }
+            ],
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596580Z",
+            "updated_at": "2025-07-10T11:27:13.596582Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": "TELL_US_MORE_ABOUT_YOUR_BUSINESS",
+            "submission": {
+              "value": "Parent Company",
+              "submitted_at": "2025-07-10T14:49:05.789511Z"
+            }
+          },
+          {
+            "key": "country_of_incorporation",
+            "type": "text",
+            "label": "Country of Incorporation",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596587Z",
+            "updated_at": "2025-07-10T11:27:13.596589Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            },
+            "sub_category": "TELL_US_MORE_ABOUT_YOUR_BUSINESS"
+          },
+          {
+            "key": "registraion_number_tax_id",
+            "type": "text",
+            "label": "Registration Number/Tax ID",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596593Z",
+            "updated_at": "2025-07-10T11:27:13.596594Z",
+            "validation": {
+              "max": 20,
+              "min": 10,
+              "required": true
+            },
+            "sub_category": "TELL_US_MORE_ABOUT_YOUR_BUSINESS"
+          },
+          {
+            "key": "company_registration_number",
+            "type": "text",
+            "label": "Comapany Registration Number",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596598Z",
+            "updated_at": "2025-07-10T11:27:13.596600Z",
+            "validation": {
+              "max": 30,
+              "min": 10,
+              "required": true
+            },
+            "sub_category": "TELL_US_MORE_ABOUT_YOUR_BUSINESS"
+          },
+          {
+            "key": "nature_of_business",
+            "type": "select",
+            "label": "Nature of Business",
+            "options": [
+              {
+                "label": "Sole Proprietorship",
+                "value": "Sole Proprietorship"
+              },
+              { "label": "Limited Liability", "value": "Limited Liability" }
+            ],
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596604Z",
+            "updated_at": "2025-07-10T11:27:13.596605Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": "TELL_US_MORE_ABOUT_YOUR_BUSINESS"
+          },
+          {
+            "key": "website_url",
+            "type": "text",
+            "label": "Website Url (optional)",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596609Z",
+            "updated_at": "2025-07-10T11:27:13.596611Z",
+            "validation": {
+              "max": "100",
+              "min": "10",
+              "regex": "^(https?:\\/\\/)?([\\w\\-]+\\.)+[\\w\\-]{2,}(\\/\\S*)?$",
+              "required": false
+            },
+            "sub_category": "TELL_US_MORE_ABOUT_YOUR_BUSINESS"
+          },
+          {
+            "key": "date_of_establishment",
+            "type": "date",
+            "label": "Date of Establishment",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596615Z",
+            "updated_at": "2025-07-10T11:27:13.596617Z",
+            "validation": {
+              "maxDate": "yyyy-mm-dd",
+              "minDate": "yyyy-mm-dd",
+              "required": true
+            },
+            "sub_category": "TELL_US_MORE_ABOUT_YOUR_BUSINESS",
+            "submission": {
+              "value": "2025-09-12",
+              "submitted_at": "2025-07-10T14:49:05.789523Z"
+            }
+          },
+          {
+            "key": "type_of_product_services_offered",
+            "type": "select",
+            "label": "Type of Products/Services Offered",
+            "options": [
+              { "label": "Real Estate", "value": "Real Estate" },
+              { "label": "Betting", "value": "Betting" },
+              { "label": "Oil and Gas", "value": "Oil and Gas" },
+              {
+                "label": "Financial Technology",
+                "value": "Financial Technology"
+              },
+              { "label": "Traveling Agency", "value": "Traveling Agency" },
+              { "label": "Consultant", "value": "Consultant" },
+              { "label": "Manufacturing", "value": "Manufacturing" },
+              { "label": "Agriculture", "value": "Agriculture" },
+              { "label": "Mechanized Family", "value": "Mechanized Family" }
+            ],
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596621Z",
+            "updated_at": "2025-07-10T11:27:13.596632Z",
+            "sub_category": "TELL_US_MORE_ABOUT_YOUR_BUSINESS"
+          },
+          {
+            "key": "primary_contact_name",
+            "type": "text",
+            "label": "Primary Contact Name",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596636Z",
+            "updated_at": "2025-07-10T11:27:13.596638Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            },
+            "sub_category": "BUSINESS_CONTACT"
+          },
+          {
+            "key": "primary_contact_email",
+            "type": "email",
+            "label": "Primary Contact Email",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596642Z",
+            "updated_at": "2025-07-10T11:27:13.596643Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "regex": "^[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,}$",
+              "required": true
+            },
+            "sub_category": "BUSINESS_CONTACT"
+          },
+          {
+            "key": "primary_contact_phone",
+            "type": "text",
+            "label": "Primary Contact Phone",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596647Z",
+            "updated_at": "2025-07-10T11:27:13.596649Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            },
+            "sub_category": "BUSINESS_CONTACT"
+          },
+          {
+            "key": "bank_name",
+            "type": "text",
+            "label": "Bank Name",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596652Z",
+            "updated_at": "2025-07-10T11:27:13.596654Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            },
+            "sub_category": "BANK_DETAILS"
+          },
+          {
+            "key": "account_number",
+            "type": "text",
+            "label": "Account Number",
+            "category": "COMPANY_INFORMATION",
+            "created_at": "2025-07-10T11:27:13.596658Z",
+            "updated_at": "2025-07-10T11:27:13.596660Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            },
+            "sub_category": "BANK_DETAILS"
+          }
+        ]
+      },
+      {
+        "category": "ACTIVITIES_AND_REGULATORY",
+        "items": [
+          {
+            "key": "country_you_conduct_business",
+            "type": "checkbox",
+            "label": "Which country (ies) do you conduct business activities?",
+            "options": [
+              { "label": "NIGERIA", "value": "NIGERIA" },
+              { "label": "KENYA", "value": "KENYA" },
+              { "label": "SOUTH AFRICA", "value": "SOUTH AFRICA" }
+            ],
+            "category": "ACTIVITIES_AND_REGULATORY",
+            "created_at": "2025-07-10T11:27:13.596663Z",
+            "updated_at": "2025-07-10T11:27:13.596665Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": "BUSINESS_AND_LEGAL_STANDING"
+          },
+          {
+            "key": "has_outstanding_legal_disputes",
+            "type": "select",
+            "label": "Does the company have any outstanding or ongoing legal disputes",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "ACTIVITIES_AND_REGULATORY",
+            "created_at": "2025-07-10T11:27:13.596669Z",
+            "updated_at": "2025-07-10T11:27:13.596671Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": "BUSINESS_AND_LEGAL_STANDING"
+          },
+          {
+            "key": "subject_to_sanctions",
+            "type": "select",
+            "label": "Is your company subject to any country specific sanctions or restrictions",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "ACTIVITIES_AND_REGULATORY",
+            "created_at": "2025-07-10T11:27:13.596674Z",
+            "updated_at": "2025-07-10T11:27:13.596676Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": "BUSINESS_AND_LEGAL_STANDING"
+          },
+          {
+            "key": "primary_regulators",
+            "type": "text",
+            "label": "What are your primary regulators? (optional)",
+            "category": "ACTIVITIES_AND_REGULATORY",
+            "created_at": "2025-07-10T11:27:13.596680Z",
+            "updated_at": "2025-07-10T11:27:13.596682Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            },
+            "sub_category": "BUSINESS_AND_LEGAL_STANDING"
+          },
+          {
+            "key": "convicted_of_any_financial_crime",
+            "type": "select",
+            "label": "Has any company officer, director, or beneficial owner been convicted of bribery, theft, embezzlement,fraud, malpractice, gross misconduct, or any other seriosu financial crime.",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "ACTIVITIES_AND_REGULATORY",
+            "created_at": "2025-07-10T11:27:13.596686Z",
+            "updated_at": "2025-07-10T11:27:13.596688Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": "BUSINESS_AND_LEGAL_STANDING"
+          },
+          {
+            "key": "considered_pep",
+            "type": "select",
+            "label": "Are any company officers, directors or beneficial owner considered to be Politically Exposed Person(PEP)",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "ACTIVITIES_AND_REGULATORY",
+            "created_at": "2025-07-10T11:27:13.596692Z",
+            "updated_at": "2025-07-10T11:27:13.596693Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": "REGULATORY_OVERSIGHT"
+          },
+          {
+            "key": "pep_procedure_in_place",
+            "type": "select",
+            "label": "Does the company have procedures in place for identifying PEPS",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "ACTIVITIES_AND_REGULATORY",
+            "created_at": "2025-07-10T11:27:13.596697Z",
+            "updated_at": "2025-07-10T11:27:13.596699Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": "REGULATORY_OVERSIGHT"
+          },
+          {
+            "key": "ever_been_involved_in_financial_crime_investigation",
+            "type": "select",
+            "label": "Has the company ever been incolved in financial crime investigation",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "ACTIVITIES_AND_REGULATORY",
+            "created_at": "2025-07-10T11:27:13.596703Z",
+            "updated_at": "2025-07-10T11:27:13.596704Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": "REGULATORY_OVERSIGHT"
+          },
+          {
+            "key": "considered_pep",
+            "type": "select",
+            "label": "Are any company officers, directors or beneficial owner considered to be Politically Exposed Person(PEP)",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "ACTIVITIES_AND_REGULATORY",
+            "created_at": "2025-07-10T11:27:13.596708Z",
+            "updated_at": "2025-07-10T11:27:13.596710Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": "REGULATORY_OVERSIGHT"
+          }
+        ]
+      },
+      {
+        "category": "AML_CPF_KYC",
+        "items": [
+          {
+            "key": "anti_money_laundeying_in_place",
+            "type": "select",
+            "label": "Does the company have an AML(Anti money laundering) policy in place?",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "AML_CPF_KYC",
+            "created_at": "2025-07-10T11:27:13.596714Z",
+            "updated_at": "2025-07-10T11:27:13.596715Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": null
+          },
+          {
+            "key": "comply_with_data_protection",
+            "type": "select",
+            "label": "Does the company comply with data protection and privacy laws?",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "AML_CPF_KYC",
+            "created_at": "2025-07-10T11:27:13.596719Z",
+            "updated_at": "2025-07-10T11:27:13.596724Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": null
+          },
+          {
+            "key": "kyc_policy_in_place",
+            "type": "select",
+            "label": "Does the company have a sacntion screening and KYC (Know your customer) policy in place?",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "AML_CPF_KYC",
+            "created_at": "2025-07-10T11:27:13.596728Z",
+            "updated_at": "2025-07-10T11:27:13.596730Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": null
+          },
+          {
+            "key": "abc_policy_in_place",
+            "type": "select",
+            "label": "Does the company have an anti bribery and corruption (ABC) policy in place?",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "AML_CPF_KYC",
+            "created_at": "2025-07-10T11:27:13.596734Z",
+            "updated_at": "2025-07-10T11:27:13.596735Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": null
+          },
+          {
+            "key": "legal_and_compliance_program",
+            "type": "select",
+            "label": "Does the business have a legal and complaince program for cordinating AML compliance?",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "AML_CPF_KYC",
+            "created_at": "2025-07-10T11:27:13.596739Z",
+            "updated_at": "2025-07-10T11:27:13.596741Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": null
+          },
+          {
+            "key": "certify_infomation_provided",
+            "type": "radio",
+            "label": "I certify that the information provided in this questionnaire is true and accurate to the best of my knowledge. I understand that Duplo Limited may use this information for institutional due diligence and compliance purposes, including anti-money laundering, anti-terrorism, and international sanctions screening.",
+            "options": [
+              { "label": "YES", "value": "YES" },
+              { "label": "NO", "value": "NO" }
+            ],
+            "category": "AML_CPF_KYC",
+            "created_at": "2025-07-10T11:27:13.596745Z",
+            "updated_at": "2025-07-10T11:27:13.596747Z",
+            "validation": {
+              "required": true
+            },
+            "sub_category": null
+          },
+          {
+            "key": "aml_full_name",
+            "type": "text",
+            "label": "Full Name",
+            "category": "AML_CPF_KYC",
+            "created_at": "2025-07-10T11:27:13.596750Z",
+            "updated_at": "2025-07-10T11:27:13.596752Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            },
+            "sub_category": null
+          },
+          {
+            "key": "aml_positon",
+            "type": "text",
+            "label": "Position",
+            "category": "AML_CPF_KYC",
+            "created_at": "2025-07-10T11:27:13.596756Z",
+            "updated_at": "2025-07-10T11:27:13.596758Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            },
+            "sub_category": null
+          }
+        ]
+      },
+      {
+        "category": "KYC_DOCUMENT",
+        "items": [
+          {
+            "key": "cac_status_report",
+            "type": "file",
+            "label": "Cac Status Report",
+            "category": "KYC_DOCUMENT",
+            "created_at": "2025-07-10T11:27:13.596762Z",
+            "updated_at": "2025-07-10T11:27:13.596763Z",
+            "validation": {
+              "fileType": ["pdf"],
+              "required": true,
+              "fileSizeInKb": 20
+            },
+            "sub_category": null
+          },
+          {
+            "key": "certificate_of_incorporation_and_registration",
+            "type": "file",
+            "label": "Certificate of Incorporation or Certificate of Registration",
+            "category": "KYC_DOCUMENT",
+            "created_at": "2025-07-10T11:27:13.596767Z",
+            "updated_at": "2025-07-10T11:27:13.596769Z",
+            "validation": {
+              "fileType": ["pdf"],
+              "required": true,
+              "fileSizeInKb": 20
+            },
+            "sub_category": null
+          },
+          {
+            "key": "cac_2_cac_7",
+            "type": "file",
+            "label": "CAC 2/ CAC 7",
+            "category": "KYC_DOCUMENT",
+            "created_at": "2025-07-10T11:27:13.596772Z",
+            "updated_at": "2025-07-10T11:27:13.596774Z",
+            "validation": {
+              "fileType": ["pdf"],
+              "required": true,
+              "fileSizeInKb": 20
+            },
+            "sub_category": null
+          },
+          {
+            "key": "individuals_with_about_5_percent",
+            "type": "file",
+            "label": "Document showing individuals or entities owning above 5% shares in a subject entity or equivalent doucment",
+            "category": "KYC_DOCUMENT",
+            "created_at": "2025-07-10T11:27:13.596778Z",
+            "updated_at": "2025-07-10T11:27:13.596779Z",
+            "validation": {
+              "fileType": ["pdf"],
+              "required": true,
+              "fileSizeInKb": 20
+            },
+            "sub_category": null
+          },
+          {
+            "key": "proof_of_address",
+            "type": "file",
+            "label": "Proof of address not more than 3 months (Utility bills e.g PHCN, LAWMA, etc)",
+            "category": "KYC_DOCUMENT",
+            "created_at": "2025-07-10T11:27:13.596783Z",
+            "updated_at": "2025-07-10T11:27:13.596785Z",
+            "validation": {
+              "fileType": ["pdf"],
+              "required": true,
+              "fileSizeInKb": 20
+            },
+            "sub_category": null,
+            "submission": {
+              "value": {
+                "url": "http://placeimg.com/640/480",
+                "size": "617",
+                "fileName": "quantifying.pgm"
+              },
+              "submitted_at": "2025-07-10T14:49:05.789517Z"
+            }
+          },
+          {
+            "key": "nemart_document",
+            "type": "file",
+            "label": "Nemart Document",
+            "category": "KYC_DOCUMENT",
+            "created_at": "2025-07-10T11:27:13.596789Z",
+            "updated_at": "2025-07-10T11:27:13.596790Z",
+            "validation": {
+              "fileType": ["pdf"],
+              "required": true,
+              "fileSizeInKb": 20
+            },
+            "sub_category": null
+          },
+          {
+            "key": "appropriate_license_for_business",
+            "type": "select",
+            "label": "Select the appropriate license if your business requires License to operate",
+            "options": [
+              { "label": "Select an option", "value": "" },
+              "Central Bank Of Nigeria (CBN)",
+              "Securities and Exchange Commission ( SEC)",
+              "National Pension Commission ( PENCOM)",
+              "Nigerian Communcication Commission ( NCC)",
+              "Department of Petroleum Resources (DPR)"
+            ],
+            "category": "KYC_DOCUMENT",
+            "created_at": "2025-07-10T11:27:13.596794Z",
+            "updated_at": "2025-07-10T12:48:36.288300Z",
+            "validation": {
+              "fileType": ["pdf"],
+              "required": true,
+              "fileSizeInKb": 20
+            },
+            "sub_category": null
+          }
+        ]
+      },
+      {
+        "category": "DIRECTOR_SHARE_HOLDER",
+        "items": [
+          {
+            "key": "first_name",
+            "type": "text",
+            "label": "First Name",
+            "created_at": "2025-07-10T11:27:13.596828Z",
+            "updated_at": "2025-07-10T11:27:13.596830Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            }
+          },
+          {
+            "key": "last_name",
+            "type": "text",
+            "label": "Last Name",
+            "created_at": "2025-07-10T11:27:13.596834Z",
+            "updated_at": "2025-07-10T11:27:13.596836Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            }
+          },
+          {
+            "key": "phoene",
+            "type": "text",
+            "label": "Phone Number",
+            "created_at": "2025-07-10T11:27:13.596843Z",
+            "updated_at": "2025-07-10T11:27:13.596845Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            }
+          },
+          {
+            "key": "email",
+            "type": "email",
+            "label": "Email Address",
+            "created_at": "2025-07-10T11:27:13.596849Z",
+            "updated_at": "2025-07-10T11:27:13.596851Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            }
+          },
+          {
+            "key": "d_o_b",
+            "type": "date",
+            "label": "Date of Birth",
+            "created_at": "2025-07-10T11:27:13.596854Z",
+            "updated_at": "2025-07-10T11:27:13.596856Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "maxDate": "yyyy-mm-dd",
+              "minDate": "yyyy-mm-dd",
+              "required": true
+            }
+          },
+          {
+            "key": "nationality",
+            "type": "text",
+            "label": "Nationality",
+            "created_at": "2025-07-10T11:27:13.596859Z",
+            "updated_at": "2025-07-10T11:27:13.596861Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            }
+          },
+          {
+            "key": "country_of_residence",
+            "type": "text",
+            "label": "Country of Residence",
+            "created_at": "2025-07-10T11:27:13.596865Z",
+            "updated_at": "2025-07-10T11:27:13.596866Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            }
+          },
+          {
+            "key": "state_of_residence",
+            "type": "text",
+            "label": "State of Residence",
+            "created_at": "2025-07-10T11:27:13.596870Z",
+            "updated_at": "2025-07-10T11:27:13.596872Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            }
+          },
+          {
+            "key": "address",
+            "type": "text",
+            "label": "Address Residence",
+            "created_at": "2025-07-10T11:27:13.596875Z",
+            "updated_at": "2025-07-10T11:27:13.596877Z",
+            "validation": {
+              "max": 255,
+              "min": 4,
+              "required": true
+            }
+          },
+          {
+            "key": "proof_of_address",
+            "type": "file",
+            "label": "Proof of Address",
+            "created_at": "2025-07-10T11:27:13.596882Z",
+            "updated_at": "2025-07-10T11:27:13.596884Z",
+            "validation": {
+              "fileType": ["jpeg", "png"],
+              "required": true
+            }
+          },
+          {
+            "key": "is_ultimate_owner",
+            "type": "radio",
+            "label": "This director is also an Ultimate Beneficiary Owner (Shareholder) (at least 25% of the business)",
+            "created_at": "2025-07-10T11:27:13.596887Z",
+            "updated_at": "2025-07-10T11:27:13.596889Z",
+            "validation": {
+              "required": true
+            }
+          }
+        ]
+      }
+    ],
+    "extraForBusiness": [
+      {
+        "key": "appropriate_license_for_business",
+        "type": "select",
+        "label": "Select the appropriate license if your business requires License to operate",
+        "created_at": "2025-07-10T12:44:34.307267Z",
+        "updated_at": "2025-07-10T12:44:34.307277Z",
+        "validation": {
+          "fileType": ["pdf"],
+          "required": true,
+          "fileSizeInKb": 20
+        }
+      }
+    ],
+    "directorAndShareHolder": {
+      "DIRECTOR": [
+        {
+          "d_o_b": {
+            "value": "1999-09-12",
+            "submitted_at": "2025-07-10T14:49:05.783099Z"
+          },
+          "email": {
+            "value": "Christop_Leannon87@gmail.com",
+            "submitted_at": "2025-07-10T14:49:05.783095Z"
+          },
+          "address": {
+            "value": "6273 Reanna Field",
+            "submitted_at": "2025-07-10T14:49:05.783118Z"
+          },
+          "last_name": {
+            "value": "Skiles",
+            "submitted_at": "2025-07-10T14:49:05.783090Z"
+          },
+          "first_name": {
+            "value": "Kody",
+            "submitted_at": "2025-07-10T14:49:05.783085Z"
+          },
+          "nationality": {
+            "value": "NIGERIAN",
+            "submitted_at": "2025-07-10T14:49:05.783104Z"
+          },
+          "proof_of_address": {
+            "value": {
+              "url": "http://placeimg.com/640/480",
+              "size": "571",
+              "fileName": "reinvent.frame"
+            },
+            "submitted_at": "2025-07-10T14:49:05.783122Z"
+          },
+          "state_of_residence": {
+            "value": "KIGALI",
+            "submitted_at": "2025-07-10T14:49:05.783113Z"
+          },
+          "country_of_residence": {
+            "value": "KENYA",
+            "submitted_at": "2025-07-10T14:49:05.783108Z"
+          }
+        }
+      ],
+      "SHAREHOLDER": [
+        {
+          "d_o_b": {
+            "value": "1999-09-12",
+            "submitted_at": "2025-07-10T14:49:05.782985Z"
+          },
+          "email": {
+            "value": "Evangeline_Feest@gmail.com",
+            "submitted_at": "2025-07-10T14:49:05.782980Z"
+          },
+          "address": {
+            "value": "2837 Willard Wall",
+            "submitted_at": "2025-07-10T14:49:05.783004Z"
+          },
+          "last_name": {
+            "value": "Rempel",
+            "submitted_at": "2025-07-10T14:49:05.782974Z"
+          },
+          "first_name": {
+            "value": "Valentin",
+            "submitted_at": "2025-07-10T14:49:05.782961Z"
+          },
+          "nationality": {
+            "value": "NIGERIAN",
+            "submitted_at": "2025-07-10T14:49:05.782990Z"
+          },
+          "proof_of_address": {
+            "value": {
+              "url": "http://placeimg.com/640/480",
+              "size": "322",
+              "fileName": "car_azure_tasty.lvp"
+            },
+            "submitted_at": "2025-07-10T14:49:05.783009Z"
+          },
+          "state_of_residence": {
+            "value": "KIGALI",
+            "submitted_at": "2025-07-10T14:49:05.782999Z"
+          },
+          "country_of_residence": {
+            "value": "KENYA",
+            "submitted_at": "2025-07-10T14:49:05.782995Z"
+          }
+        },
+        {
+          "d_o_b": {
+            "value": "1999-09-12",
+            "submitted_at": "2025-07-10T14:49:05.783045Z"
+          },
+          "email": {
+            "value": "Zelda.Gutmann78@hotmail.com",
+            "submitted_at": "2025-07-10T14:49:05.783040Z"
+          },
+          "address": {
+            "value": "004 Leanna Manors",
+            "submitted_at": "2025-07-10T14:49:05.783063Z"
+          },
+          "last_name": {
+            "value": "Koepp",
+            "submitted_at": "2025-07-10T14:49:05.783036Z"
+          },
+          "first_name": {
+            "value": "Murphy",
+            "submitted_at": "2025-07-10T14:49:05.783031Z"
+          },
+          "nationality": {
+            "value": "NIGERIAN",
+            "submitted_at": "2025-07-10T14:49:05.783049Z"
+          },
+          "proof_of_address": {
+            "value": {
+              "url": "http://placeimg.com/640/480",
+              "size": "92",
+              "fileName": "teal_directives.sus"
+            },
+            "submitted_at": "2025-07-10T14:49:05.783067Z"
+          },
+          "state_of_residence": {
+            "value": "KIGALI",
+            "submitted_at": "2025-07-10T14:49:05.783058Z"
+          },
+          "country_of_residence": {
+            "value": "KENYA",
+            "submitted_at": "2025-07-10T14:49:05.783054Z"
+          }
+        }
+      ]
+    },
+    "progress": {
+      "submitted": 5,
+      "total": 6,
+      "percentageFilled": 83.33
+    }
+  }
+}
