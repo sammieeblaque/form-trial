@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useForm } from "react-hook-form";
 import {
-  formatSectionTitle,
-  formData,
+  company_details,
+  // formatSectionTitle,
   // formData,
   formSchema,
-  groupedFields,
+  // groupedFields,
   IFormDataProps,
 } from "../constants";
 import { FormBuilderRenderer } from "./FormRenderer";
 
 // File preview component
 
-const JsonformBuilder = () => {
+const JsonformBuilder = <T extends IFormDataProps>({ data }: { data: T }) => {
   const getDefaultValues = (schema: IFormDataProps["items"]) => {
     const defaults: Record<string, any> = {};
     schema?.forEach((field: any) => {
@@ -42,7 +42,7 @@ const JsonformBuilder = () => {
     formState: { errors },
     reset,
   } = useForm({
-    defaultValues: getDefaultValues(formData.items),
+    defaultValues: getDefaultValues(company_details.items),
   });
 
   const onSubmit = (data: any) => {
@@ -61,16 +61,16 @@ const JsonformBuilder = () => {
       </h1>
 
       <div className="space-y-6">
-        {/* {formData.items.map((field) => (
+        {data.items.map((field) => (
           <FormBuilderRenderer
-            key={field.name}
+            key={field.key}
             field={field}
             control={control}
             errors={errors}
           />
-        ))} */}
+        ))}
 
-        {Object.entries(groupedFields).map(([sectionTitle, fields]) => (
+        {/* {Object.entries(groupedFields).map(([sectionTitle, fields]) => (
           <div key={sectionTitle} className="space-y-6">
             <h2 className="text-lg font-semibold text-gray-800 border-b pb-2">
               {formatSectionTitle(sectionTitle)}
@@ -86,7 +86,7 @@ const JsonformBuilder = () => {
               ))}
             </div>
           </div>
-        ))}
+        ))} */}
 
         <div className="flex space-x-4 pt-6">
           <button

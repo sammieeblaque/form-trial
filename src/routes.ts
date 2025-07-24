@@ -1,8 +1,15 @@
-import { createBrowserRouter, redirect } from "react-router";
 import React from "react";
+import { createBrowserRouter, redirect } from "react-router";
 
-const ComplianceFormLayout = React.lazy(
-  () => import("./components/complainceFormLayout")
+const CompanyDetails = React.lazy(() =>
+  import("./components/fileRoutes").then((module) => ({
+    default: module.CompanyDirectors,
+  }))
+);
+const CompanyDirectors = React.lazy(() =>
+  import("./components/fileRoutes").then((module) => ({
+    default: module.DirectorsShareholder,
+  }))
 );
 
 export const router = createBrowserRouter([
@@ -12,14 +19,14 @@ export const router = createBrowserRouter([
   },
   {
     path: "compliance/company-information",
-    Component: ComplianceFormLayout,
+    Component: CompanyDetails,
   },
   {
     path: "compliance/directors-owners",
-    Component: ComplianceFormLayout,
+    Component: CompanyDirectors,
   },
-  {
-    path: "compliance/kyc-documents",
-    Component: ComplianceFormLayout,
-  },
+  // {
+  //   path: "compliance/kyc-documents",
+  //   Component: ComplianceFormLayout,
+  // },
 ]);

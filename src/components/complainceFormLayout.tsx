@@ -1,8 +1,10 @@
-import JsonformBuilder from "../form-builder/Form";
+import React from "react";
 import ComplianceSidebar from "./complianceSidebar";
 import StepNavigation from "./complianceStepNavigation";
 
-const ComplianceFormLayout = () => {
+// pass children
+
+const ComplianceFormLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex min-h-screen bg-white">
       <ComplianceSidebar />
@@ -10,7 +12,7 @@ const ComplianceFormLayout = () => {
       <div className="flex-1 flex flex-col">
         <main className="flex-1 p-8">
           <div className="max-w-4xl mx-auto">
-            <JsonformBuilder />
+            {children}
             <StepNavigation />
           </div>
         </main>
