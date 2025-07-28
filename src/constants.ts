@@ -151,7 +151,15 @@ export interface IFormDataProp {
     key: string;
     type: string;
     label: string;
-    validation?: { max?: number; min?: number; required?: boolean };
+    validation?: {
+      max?: number;
+      min?: number;
+      required?: boolean;
+      fileType?: string[];
+      maxSize?: number; // in MB
+      accept?: string; // file types
+      multiple?: boolean; // for file inputs
+    };
     placeholder?: string;
     options?: { value: string; label: string }[];
     sub_category?: string;
@@ -164,7 +172,12 @@ export interface IFormDataProps {
     key: string;
     type: string;
     label: string;
-    validation?: { max?: number; min?: number; required?: boolean };
+    validation?: {
+      max?: number;
+      min?: number;
+      required?: boolean;
+      fileType?: string[];
+    };
     placeholder?: string;
     options?: { value: string; label: string }[];
     sub_category?: string;
@@ -263,6 +276,18 @@ export const company_details: IFormDataProps = {
       sub_category: "TELL_US_MORE_ABOUT_YOUR_BUSINESS",
       placeholder: "Select date of establishment",
       submission: { value: "2025-09-12" },
+    },
+    {
+      key: "proof_of_address",
+      type: "file",
+      label:
+        "Proof of Address, not more than 3 months, such as utility bill, bank statement, etc.",
+      placeholder: "Upload proof of address",
+      sub_category: "TELL_US_MORE_ABOUT_YOUR_BUSINESS",
+      validation: {
+        fileType: ["image/jpeg", "image/png", "application/pdf"],
+        required: false,
+      },
     },
     // {
     //   key: "type_of_product_services_offered",

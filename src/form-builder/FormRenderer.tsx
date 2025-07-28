@@ -1,14 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Control, Controller, FieldErrors, FieldValues } from "react-hook-form";
-import {
-  // IFieldProps,
-  IFormDataProp,
-} from "../constants";
+import { IFormDataProp } from "../constants";
 import { useTranslation } from "react-i18next";
-// import { getValidationRules } from "./utils";
-// import Field from "./Field";
 import { getNewValidationRules } from "./utils";
-// import { FilePreview } from "./FilePreview";
+import { FilePreview } from "./FilePreview";
+import { useRef } from "react";
 
 export const FormBuilderRenderer = ({
   field,
@@ -20,6 +16,7 @@ export const FormBuilderRenderer = ({
   errors: FieldErrors<FieldValues>;
 }) => {
   const { t } = useTranslation();
+  const inputRef = useRef<HTMLInputElement>(null);
   const renderField = (field: IFormDataProp["items"]) => {
     const baseClasses =
       "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
@@ -192,62 +189,66 @@ export const FormBuilderRenderer = ({
           />
         );
 
-      //   case "file":
-      //     return (
-      //       <Controller
-      //         name={field.key}
-      //         control={control}
-      //         //  rules={getValidationRules(field)}
-      //         render={({ field: { onChange, value, onBlur } }) => {
-      //           const handleFileChange = (e: any) => {
-      //             const files = Array.from(e.target.files);
-      //             if (field.multiple) {
-      //               onChange(files);
-      //             } else {
-      //               onChange(files[0] || null);
-      //             }
-      //           };
+      case "file":
+        return (
+          <Controller
+            name={field.key}
+            control={control}
+            //  rules={getValidationRules(field)}
+            render={({ field: { onChange, value, onBlur } }) => {
+              const handleFileChange = (e: any) => {
+                const files = Array.from(e.target.files);
+                if (field.validation?.multiple) {
+                  onChange(files);
+                } else {
+                  onChange(files[0] || null);
+                }
+              };
 
-      //           const handleRemoveFile = (index: number | null) => {
-      //             if (field.multiple && index !== null) {
-      //               const newFiles = Array.isArray(value) ? [...value] : [];
-      //               newFiles.splice(index, 1);
-      //               onChange(newFiles.length > 0 ? newFiles : null);
-      //             } else {
-      //               onChange(null);
-      //             }
-      //           };
+              const handleRemoveFile = (index: number | null) => {
+                if (field.validation?.multiple && index !== null) {
+                  const newFiles = Array.isArray(value) ? [...value] : [];
+                  newFiles.splice(index, 1);
+                  onChange(newFiles.length > 0 ? newFiles : null);
+                } else {
+                  onChange(null);
+                  if (inputRef.current) {
+                    inputRef.current.value = "";
+                  }
+                }
+              };
 
-      //           return (
-      //             <div>
-      //               <input
-      //                 type="file"
-      //                 accept={field.accept}
-      //                 multiple={field.multiple}
-      //                 onChange={handleFileChange}
-      //                 onBlur={onBlur}
-      //                 className={`${baseClasses} ${errorClasses} file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100`}
-      //               />
-      //               <FilePreview
-      //                 files={value}
-      //                 onRemove={handleRemoveFile}
-      //                 multiple={field.multiple}
-      //               />
-      //               {field.maxSize && (
-      //                 <p className="mt-1 text-xs text-gray-500">
-      //                   Maximum file size: {field.maxSize}MB
-      //                 </p>
-      //               )}
-      //               {field.accept && (
-      //                 <p className="mt-1 text-xs text-gray-500">
-      //                   Accepted formats: {field.accept}
-      //                 </p>
-      //               )}
-      //             </div>
-      //           );
-      //         }}
-      //       />
-      //     );
+              return (
+                <div>
+                  <input
+                    type="file"
+                    ref={inputRef}
+                    accept={field.validation?.fileType?.join(", ") || ""}
+                    multiple={field.validation?.multiple}
+                    onChange={handleFileChange}
+                    onBlur={onBlur}
+                    className={`${baseClasses} ${errorClasses} file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100`}
+                  />
+                  <FilePreview
+                    files={value}
+                    onRemove={handleRemoveFile}
+                    multiple={field.validation?.multiple}
+                  />
+                  {field.validation?.maxSize && (
+                    <p className="mt-1 text-xs text-gray-500">
+                      Maximum file size: {field.validation.maxSize}MB
+                    </p>
+                  )}
+                  {field.validation?.accept && (
+                    <p className="mt-1 text-xs text-gray-500">
+                      Accepted formats: {field.validation.accept}
+                    </p>
+                  )}
+                </div>
+              );
+            }}
+          />
+        );
 
       default:
         return <div>Unsupported field type: {field.type}</div>;

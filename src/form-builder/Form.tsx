@@ -29,6 +29,9 @@ const JsonformBuilder = <T extends IFormDataProps>({ data }: { data: T }) => {
         case "radio":
           defaults[field.key] = "";
           break;
+        case "file":
+          defaults[field.key] = field.validation?.multiple ? [] : null;
+          break;
         default:
           defaults[field.key] = "";
       }
