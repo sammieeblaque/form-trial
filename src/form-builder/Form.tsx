@@ -1,16 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useForm } from "react-hook-form";
-import {
-  company_details,
-  // formatSectionTitle,
-  // formData,
-  formSchema,
-  // groupedFields,
-  IFormDataProps,
-} from "../constants";
+import { company_details, formSchema, IFormDataProps } from "../constants";
 import { FormBuilderRenderer } from "./FormRenderer";
-
-// File preview component
 
 const JsonformBuilder = <T extends IFormDataProps>({ data }: { data: T }) => {
   const getDefaultValues = (schema: IFormDataProps["items"]) => {
@@ -63,7 +54,7 @@ const JsonformBuilder = <T extends IFormDataProps>({ data }: { data: T }) => {
         {formSchema.title}
       </h1>
 
-      <div className="space-y-6">
+      <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         {data.items.map((field) => (
           <FormBuilderRenderer
             key={field.key}

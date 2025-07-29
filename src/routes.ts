@@ -11,6 +11,7 @@ const CompanyDirectors = React.lazy(() =>
     default: module.DirectorsShareholder,
   }))
 );
+const KycDocStuffNav = React.lazy(() => import("./components/sideNavigation"));
 
 export const router = createBrowserRouter([
   {
@@ -25,8 +26,8 @@ export const router = createBrowserRouter([
     path: "compliance/directors-owners",
     Component: CompanyDirectors,
   },
-  // {
-  //   path: "compliance/kyc-documents",
-  //   Component: ComplianceFormLayout,
-  // },
+  {
+    path: "compliance/kyc-documents",
+    Component: KycDocStuffNav,
+  },
 ]);
