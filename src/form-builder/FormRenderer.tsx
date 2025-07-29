@@ -194,7 +194,7 @@ export const FormBuilderRenderer = ({
           <Controller
             name={field.key}
             control={control}
-            //  rules={getValidationRules(field)}
+            rules={getNewValidationRules(field)}
             render={({ field: { onChange, value, onBlur } }) => {
               const handleFileChange = (e: any) => {
                 const files = Array.from(e.target.files);

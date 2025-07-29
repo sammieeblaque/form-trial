@@ -151,6 +151,7 @@ export interface IFormDataProp {
     key: string;
     type: string;
     label: string;
+    description?: string;
     validation?: {
       max?: number;
       min?: number;
@@ -172,6 +173,7 @@ export interface IFormDataProps {
     key: string;
     type: string;
     label: string;
+    description?: string;
     validation?: {
       max?: number;
       min?: number;
@@ -280,13 +282,13 @@ export const company_details: IFormDataProps = {
     {
       key: "proof_of_address",
       type: "file",
-      label:
-        "Proof of Address, not more than 3 months, such as utility bill, bank statement, etc.",
+      label: "Proof of Address",
+      description: "Upload a document that verifies your business address",
       placeholder: "Upload proof of address",
       sub_category: "TELL_US_MORE_ABOUT_YOUR_BUSINESS",
       validation: {
         fileType: ["image/jpeg", "image/png", "application/pdf"],
-        required: false,
+        required: true,
       },
     },
     // {
